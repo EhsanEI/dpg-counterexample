@@ -34,9 +34,9 @@ class DPGCEEnv(gym.Env):
             next_state = 0
             done = True
             if self.current_state == 1:
-                reward = 2.0*expit(-a)
+                reward = 2.0*expit(-action)
             else:
-                reward = expit(a)
+                reward = expit(action)
 
         self.current_state = next_state
 
